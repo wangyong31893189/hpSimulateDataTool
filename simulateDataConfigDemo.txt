@@ -1,0 +1,42 @@
+1、json请求，输入和输出配置
+{"request":{
+	"method":"get",//get post 
+	"type":"json",//json text html
+	"uri":"/mobile/mobileOrder.do",
+	"params":{"param1":"paramValue2","param2":"paramValue2","param3":"paramValue3",}
+},
+"response":{
+	"status":"success",//success 成功 ,fail 失败 ,login  需要登录
+	"msg":"返回成功",  //成功或者失败返回的消息
+	"data":{} //其它需要返回的对象
+}}
+
+2、text请求，输入和输出配置
+{"request":{
+	"method":"get",//get post 
+	"type":"text",//json    text html
+	"uri":"/mobile/mobileOrder.do",
+	"params":{"param1":"paramValue2","param2":"paramValue2","param3":"paramValue3",}
+},
+"response":"<h1>Hello World</h1>"     //输出的是html经过编码的内容：&lt;h1&gt;Hello World&lt;/h1&gt;
+}
+
+2、html请求，输入和输出配置
+{"request":{
+	"method":"get",//get post 
+	"type":"html",//json    text html
+	"uri":"/mobile/mobileOrder.do",
+	"params":{"param1":"paramValue2","param2":"paramValue2","param3":"paramValue3",}
+},
+"response":"<h1>Hello World</h1>"   //输出的内容：<h1>Hello World</h1>
+}
+
+2、默认请求，输入和输出配置
+{"request":{
+	"method":"get",//get post 
+	"type":"html",//json    text html
+	"uri":"/mobile/mobileOrder.do",
+	"params":{"param1":"paramValue2","param2":"paramValue2","param3":"paramValue3",}
+},
+"response":"<h1>Hello World</h1>"   //输出的内容：<h1>Hello World</h1>
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="ccbServer" class="com.handpay.mina.server.MinaServer">
+		<property name="ioHandler" ref="ccbHandler"/>
+		<property name="protocolCodecFactory" ref="protocolCodecFactory"/>
+		<property name="ip" value="${server.ip}"/>
+		<property name="port" value="${server.ip.port}"/>
+	</bean>
+
+	<bean id="ccbHandler" class="com.handpay.mina.handler.MinaIoHandler">
+		<property name="handlerProcessors">
+			<map>
+				<entry key="SIMULATED" value-ref="simulatedDataProcessor" />
+			</map>
+		</property>
+	</bean>
+	<bean id="simulatedDataProcessor" class="com.handpay.mina.processor.ccb.SimulatedDataProcessor">
+	</bean>
+	
+	<bean id="protocolCodecFactory" class="com.handpay.mina.protocol.MinaProtocolCodecFactoryImpl">
+		<property name="encoder" ref="ccbEncoder" />
+		<property name="decoder" ref="ccbDecoder" />
+	</bean>
+	<bean id="ccbDecoder" class="com.handpay.mina.protocol.ccb.CCBSocketDecoder">
+		<property name="parser" ref="protocolParser" />
+	</bean>
+	<bean id="protocolParser" class="com.handpay.mina.protocol.ccb.CCBProtocolParser">
+		<property name="MD5Key" value="${ccbgame.topup.MD5Key}" />
+	</bean>
+
+	<bean id="ccbEncoder" class="com.handpay.mina.protocol.ccb.CCBSocketEncoder">
+		<property name="MD5Key" value="${ccbgame.topup.MD5Key}" />
+	</bean>
+
+</beans>

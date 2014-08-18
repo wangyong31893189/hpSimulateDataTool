@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	<context:annotation-config />
+	<aop:aspectj-autoproxy />
+	<bean class="com.handpay.core.httpinvoker.HttpInvokerPostProcessor">
+		<property name="clientUrlsInfo">
+			<map>
+				<entry key="merchant.mdseAdminService">
+					<value>${merchant.service.address}/mdseAdminService.his</value>
+				</entry>
+				<entry key="merchant.mdseStorageAdminService">
+					<value>${merchant.service.address}/mdseStorageAdminService.his</value>
+				</entry>
+			    <entry key="merchant.merchantOrderService">
+				   <value>${merchant.service.address}/merchantOrderService.his</value>
+				</entry>
+				<entry key="merchant.mdseStorageService">
+					<value>${merchant.service.address}/mdseStorageService.his</value>
+				</entry>
+		        <entry key="merchant.batchTopupService">
+		        	<value>${merchant.service.address}/batchTopupService.his</value>
+		        </entry>
+		        <entry key="merchant.mobileRegionService">
+		        	<value>${merchant.service.address}/mobileRegionService.his</value>
+		        </entry>
+		        <entry key="merchant.topupActivityService">
+		        	<value>${merchant.service.address}/topupActivityService.his</value>
+		        </entry>
+		        <entry key="merchant.topup19PayService">
+		        	<value>${merchant.service.address}/topup19PayService.his</value>
+		        </entry>
+				 <entry key="merchant.merchantTransactionLogService">
+		        	<value>${merchant.service.address}/merchantTransactionLogService.his</value>
+		        </entry>
+		        <entry key="merchant.merchantService">
+		        	<value>${merchant.service.address}/merchantService.his</value>
+		        </entry>
+				<entry key="download.messageSendService">
+			    	<value>${download.service.address}/messageSendService.his</value>
+                </entry>
+                 <entry key="merchant.ofcardMerchantService">
+				   <value>${merchant.service.address}/ofcardMerchantService.his</value>
+				</entry>
+                 <entry key="merchant.batchTopupOnlineService">
+				   <value>${merchant.service.address}/batchTopupOnlineService.his</value>
+				</entry>
+				 
+		        <entry key="merchant.supplierMdseService" >
+				   <value>${merchant.service.address}/supplierMdseService.his</value>
+				</entry>
+		        <entry key="support.rncnlService" >
+				   <value>${support.service.address}/rncnlService.his</value>
+				</entry>
+				<entry key="merchant.businessRefundService">
+					<value>${merchant.service.address}/businessRefundService.his</value>
+				</entry>
+				 <entry key="merchant.topupCheckService" >
+				   <value>${merchant.service.address}/topupCheckService.his</value>
+				</entry>
+			</map>
+		</property>		
+	</bean>
+</beans>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 中行 -->
+	<bean id="bocServer" class="com.handpay.mina.server.BOBMinaServer">
+		<property name="ioHandler" ref="bocHandler"/>
+		<property name="protocolCodecFactory" ref="BOCprotocolCodecFactory"/>
+		<property name="ip" value="${boc.server.ip}"/>
+		<property name="port" value="${boc.server.ip.port}"/>
+	</bean>
+
+	
+	<!-- 中行 -->
+	<bean id="bocHandler" class="com.handpay.mina.handler.BocMinaIoHandler">
+		<property name="handlerProcessors">
+			<map>
+				<entry key="MOBILE" value-ref="mobileProcessor" />
+			</map>
+		</property>
+	</bean>
+	<!-- 中行 -->
+	<bean id="mobileProcessor" class="com.handpay.mina.processor.boc.MobileProcessor">
+		<property name="topupMerchantCode" value="${boc.topupMerchantCode}"></property>
+	</bean>
+	
+	<!-- 中行 -->
+	<bean id="BOCprotocolCodecFactory" class="com.handpay.mina.protocol.MinaProtocolCodecFactoryImpl">
+		<property name="encoder" ref="bocEncoder" />
+		<property name="decoder" ref="bocDecoder" />
+	</bean>
+	
+	<!-- 中行 -->
+	<bean id="bocDecoder" class="com.handpay.mina.protocol.boc.BOCSocketDecoder">
+		<property name="parser" ref="bocProtocolParser" />
+	</bean>
+	<bean id="bocProtocolParser" class="com.handpay.mina.protocol.boc.MobileProtocolParser">
+	
+	</bean>
+	<!-- 中行 -->
+	<bean id="bocEncoder" class="com.handpay.mina.protocol.boc.BOCSocketEncoder">
+	
+	</bean>
+
+</beans>

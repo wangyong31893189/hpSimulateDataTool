@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "struts-config_1_3.dtd">
+
+<struts-config>
+
+	<!-- Form Beans -->
+	<form-beans>
+	</form-beans>
+
+	<!-- Global Exceptions -->
+	<global-exceptions>
+	</global-exceptions>
+
+	<!-- Global Forwards -->
+	<global-forwards>
+	</global-forwards>
+
+	<!-- Action Mappings -->
+	<action-mappings>
+		<action path="/refund">
+			<forward name="success" path="/pages/refundOK.jsp"/>
+			<forward name="error" path="/pages/refundFail.jsp"/>
+		</action>
+		<action path="/bocNotify">
+			<forward name="success" path="/pages/refundOK.jsp"/>
+			<forward name="error" path="/pages/refundFail.jsp"/>
+		</action>
+	</action-mappings> 
+		
+	<controller bufferSize="1024" memFileSize="128K">
+		<set-property
+			value="org.springframework.web.struts.DelegatingRequestProcessor"
+			property="processorClass" />
+	</controller>
+
+	<!-- Message Resources -->
+	<message-resources parameter="ApplicationResources" />
+
+</struts-config>

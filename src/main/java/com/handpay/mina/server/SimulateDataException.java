@@ -1,0 +1,12 @@
+package com.handpay.mina.server;
+
+import com.handpay.core.common.exception.BaseException;
+
+public class SimulateDataException extends BaseException {
+	public static final String PARAM_ERROR = "001";// ≤Œ ˝¥ÌŒÛ
+	public static final String CONFIG_ERROR = "001";// ≈‰÷√¥ÌŒÛ
+
+	public SimulateDataException(String errorCode, String errorMsg) {
+		super(errorCode, errorMsg);
+	}
+}

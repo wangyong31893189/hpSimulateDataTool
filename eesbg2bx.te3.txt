@@ -1,0 +1,74 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   .classpath
+#	new file:   .project
+#	new file:   .settings/.jsdtscope
+#	new file:   .settings/org.eclipse.jdt.core.prefs
+#	new file:   .settings/org.eclipse.wst.common.component
+#	new file:   .settings/org.eclipse.wst.common.project.facet.core.xml
+#	new file:   .settings/org.eclipse.wst.jsdt.ui.superType.container
+#	new file:   .settings/org.eclipse.wst.jsdt.ui.superType.name
+#	new file:   .settings/org.maven.ide.eclipse.prefs
+#	new file:   pom.xml
+#	new file:   simulateDataConfigDemo.txt
+#	new file:   src/main/config/spring/spring-action.xml
+#	new file:   src/main/config/spring/spring-application.xml
+#	new file:   src/main/config/spring/spring-client-invoker.xml
+#	new file:   src/main/config/spring/spring-server-boc.xml
+#	new file:   src/main/config/spring/spring-server-ccb.xml
+#	new file:   src/main/config/struts/struts-config.xml
+#	new file:   src/main/config/struts/struts-config_1_3.dtd
+#	new file:   src/main/java/com/handpay/action/PayAccountAction.java
+#	new file:   src/main/java/com/handpay/mina/handler/MinaIoHandler.java
+#	new file:   src/main/java/com/handpay/mina/processor/IMinaHandlerProcessor.java
+#	new file:   src/main/java/com/handpay/mina/processor/ProcessException.java
+#	new file:   src/main/java/com/handpay/mina/processor/ccb/SimulatedDataProcessor.java
+#	new file:   src/main/java/com/handpay/mina/protocol/MinaProtocolCodecFactoryImpl.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/BusinessType.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/CCBProtocolParser.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/CCBSocketDecoder.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/CCBSocketEncoder.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/ErrorCodes.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/obj/CCBRequest.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/obj/CCBResponse.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/obj/CommonErrorReq.java
+#	new file:   src/main/java/com/handpay/mina/protocol/ccb/obj/CommonErrorRes.java
+#	new file:   src/main/java/com/handpay/mina/server/ConsoleTextArea.java
+#	new file:   src/main/java/com/handpay/mina/server/LoopedStreams.java
+#	new file:   src/main/java/com/handpay/mina/server/MainApplication.java
+#	new file:   src/main/java/com/handpay/mina/server/MinaServer.java
+#	new file:   src/main/java/com/handpay/mina/server/ReadDataConfig.java
+#	new file:   src/main/java/com/handpay/mina/server/SimulateDataConfig.java
+#	new file:   src/main/java/com/handpay/mina/server/SimulateDataException.java
+#	new file:   src/main/java/com/handpay/mina/server/SimulateDataTool.java
+#	new file:   src/main/java/com/handpay/servlet/MinaServerServlet.java
+#	new file:   src/main/java/com/handpay/util/B2bstdtopupConstant.java
+#	new file:   src/main/java/com/handpay/util/DesUtil.java
+#	new file:   src/main/java/com/handpay/util/MD5Util.java
+#	new file:   src/main/resources/config/CCB.properties
+#	new file:   src/main/webapp/META-INF/MANIFEST.MF
+#	new file:   src/main/webapp/WEB-INF/web.xml
+#	new file:   src/main/webapp/pages/index.jsp
+#	new file:   src/main/webapp/pages/refundFail.jsp
+#	new file:   src/main/webapp/pages/refundOK.jsp
+#	new file:   target/classes/META-INF/MANIFEST.MF
+#	new file:   target/classes/WEB-INF/web.xml
+#	new file:   target/classes/config/CCB.properties
+#	new file:   target/classes/pages/index.jsp
+#	new file:   target/classes/pages/refundFail.jsp
+#	new file:   target/classes/pages/refundOK.jsp
+#	new file:   target/classes/spring/spring-action.xml
+#	new file:   target/classes/spring/spring-application.xml
+#	new file:   target/classes/spring/spring-client-invoker.xml
+#	new file:   target/classes/spring/spring-server-boc.xml
+#	new file:   target/classes/spring/spring-server-ccb.xml
+#	new file:   target/classes/struts/struts-config.xml
+#	new file:   target/classes/struts/struts-config_1_3.dtd
+#	new file:   target/maven-archiver/pom.properties
+#
+
